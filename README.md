@@ -21,4 +21,6 @@ include the file dump.php or copy and paste the function into a common include f
 
 ```php
   dump($var);
-```php
+```
+
+Please let me know if you have any ideas for improvements.
