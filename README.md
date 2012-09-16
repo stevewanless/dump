@@ -23,4 +23,6 @@ include the file dump.php or copy and paste the function into a common include f
   dump($var);
 ```
 
+Run the example.php file or view how it looks here http://www.seeyouontheflipside.com/dump/
+
 Please let me know if you have any ideas for improvements.
