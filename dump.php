@@ -130,7 +130,7 @@ function dump($var, $closed = false) {
   
   } else {
   
-    echo "<tr><td><strong>var</strong><br /><em><small>gettype($var);</small></em></td><td>";  
+    echo "<tr><td><strong>var</strong><br /><em><small>".gettype($var)."</small></em></td><td>$var</td>";  
     
   }
   
