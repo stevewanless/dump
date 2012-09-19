@@ -103,10 +103,8 @@ function dump($var, $closed = false) {
           echo $value;
           break;          
         case "string":
-          if($value):
+          if($value != ""):
             echo $value;
-          else:
-            echo "[empty]";
           endif;      
           break;      
         case "array":
