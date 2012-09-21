@@ -5,11 +5,11 @@
  *
  * Displays variables in a formatted table, loops through nested arrays or objects
  *
- * @license 	MIT License
- * @author  	Steve Wanless
- * @link		  http://www.seeyouontheflipside.com
- * @twitter		http://www.twitter.com/stevewanless
- * @version 	1.0
+ * @license   MIT License
+ * @author    Steve Wanless
+ * @link      http://www.seeyouontheflipside.com
+ * @twitter   http://www.twitter.com/stevewanless
+ * @version   1.1
  */
 
 function dump($var, $closed = false) {
@@ -78,9 +78,14 @@ function dump($var, $closed = false) {
   
   // start the table
   echo "<table id='dump' style='$style'>\n";
-  echo "<tr>\n\t<th>Key</th>\n\t<th>Value</th>\n";
+  
+  if( !$closed ) {
+    echo "<tr>\n\t<th>Type</th><th>".gettype($var)."</th></tr>\n";  
+  }  
 
   if ( is_array($var) || is_object($var) ) {
+  
+    echo "<tr>\n\t<th>Key<br /><em><small>Type</small></em></th>\n\t<th>Value</th></tr>\n";  
 
     // loop through the values
     foreach($var as $key => $value):
@@ -128,7 +133,7 @@ function dump($var, $closed = false) {
   
   } else {
   
-    echo "<tr><td><strong>var</strong><br /><em><small>".gettype($var)."</small></em></td><td>$var</td>";  
+    echo "<tr><td colspan='2'>$var</td>";  
     
   }
   

@@ -11,13 +11,17 @@ I got tired of typing;
   echo "</pre>";
 ```
 
-So I wrote this handy little function that does a even better job. It loops through nested arrays and objects and leaves these table initially collapsed so it's easier to view. 
+And seeing how cfdump() in ColdFusion works I got a little jealous. So I wrote this handy little function thats better than print_r(). It loops through nested arrays and objects and leaves these table initially collapsed so it's easier to view. 
 
-Requires jQuery and will output a script that checks for jQuery and if not already loaded will load it from Google's CDN. 
+Works on strings, arrays and objects (public variables only). 
+
+### dependencies 
+
+None, sort of. It requires jQuery but will output a script that checks for jQuery and if not already loaded will load it from Google's CDN. 
 
 ### instructions
 
-include the file dump.php or copy and paste the function into a common include file so it's loaded then dump you variables to your hearts content like this;
+Include the file dump.php or copy and paste the function into a common include file so it's loaded then dump you variables to your hearts content like this;
 
 ```php
   dump($var);
